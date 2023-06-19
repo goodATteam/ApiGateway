@@ -7,33 +7,8 @@ namespace ApiGateway.Services
 {
     public class CartingAgregatorService : ICartingAgregatorService
     {
-        //static HttpClient httpClient = new HttpClient();
-
         public Task<string> GetCartingInfo(string cartKey)
         {
-            /*using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:49155/api/CartingList");
-
-            // получаем ответ
-            using HttpResponseMessage response = httpClient.SendAsync(request);
-
-            using HttpContent content = response.Content;*/
-
-            // получаем ответ
-            /*using HttpResponseMessage response = httpClient.GetAsync("https://localhost:49155/api/CartingList");
-            // получаем ответ
-            string content = response.Content.ReadAsStringAsync();*/
-
-            /*var handler = new HttpClientHandler();
-            handler.SslProtocols = System.Security.Authentication.SslProtocols.Tls12;
-            handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
-            handler.Http2UnencryptedSupport = true;*/
-
-            /*HttpClient httpClient = new HttpClient
-            {
-                DefaultRequestVersion = HttpVersion.Version20,
-                DefaultVersionPolicy = HttpVersionPolicy.RequestVersionOrLower
-            };*/
-
             var socketsHandler = new SocketsHttpHandler
             {
                 EnableMultipleHttp2Connections = true
